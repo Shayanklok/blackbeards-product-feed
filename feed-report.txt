@@ -1,0 +1,8 @@
+Products on the website: 1007
+Products written to the file: 1003
+  in stock: 1003, out of stock: 0
+  with a category: 1003
+  description missing on the site (title used instead): 7
+Left out:
+  4: no photo
+No maker in the name, brand set to the store (0):

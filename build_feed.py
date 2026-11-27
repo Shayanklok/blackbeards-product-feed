@@ -4,8 +4,9 @@ Reads the store's public product listing (the same data the website shows)
 and writes one JSON line per product in OpenAI's product feed format.
 
 Run:  python build_feed.py
-Output: blackbeards-products.jsonl, feed-report.txt
+Output: blackbeards-products.jsonl (+ .gz), feed-report.txt
 """
+import gzip
 import html
 import json
 import re
@@ -141,6 +142,11 @@ def main():
     with OUT.open("w", encoding="utf-8", newline="\n") as f:
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
+    # ChatGPT's hosted-URL option wants JSONL compressed (.jsonl.gz).
+    # mtime=0 keeps the file byte-identical when the products haven't changed.
+    with open(str(OUT) + ".gz", "wb") as raw, \
+            gzip.GzipFile(filename="", fileobj=raw, mode="wb", mtime=0) as gz:
+        gz.write(OUT.read_bytes())
 
     avail = Counter(r["availability"] for r in rows)
     lines = [

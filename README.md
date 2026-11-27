@@ -9,7 +9,7 @@ can re-read it on a schedule.
 - `feed-report.txt` summarises the last run (counts, anything left out).
 
 Feed link for ChatGPT:
-`https://raw.githubusercontent.com/Shayanklok/blackbeards-product-feed/main/blackbeards-products.jsonl`
+`https://raw.githubusercontent.com/Shayanklok/blackbeards-product-feed/main/blackbeards-products.jsonl.gz`
 
 To rebuild by hand: open the repository's **Actions** tab, choose **Update product feed**,
 and press **Run workflow**.

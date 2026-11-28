@@ -1,7 +1,7 @@
-Products on the website: 1007
-Products written to the file: 1003
-  in stock: 1003, out of stock: 0
-  with a category: 1003
+Products on the website: 1004
+Products written to the file: 1000
+  in stock: 1000, out of stock: 0
+  with a category: 1000
   description missing on the site (title used instead): 7
 Left out:
   4: no photo
